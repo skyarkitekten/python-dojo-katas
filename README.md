@@ -6,7 +6,7 @@ Welcome to the Python Dojo Katas project! This repository is designed to help yo
 
 The project is organized as follows:
 
-```
+```text
 python-dojo-katas/
 ├── src/
 │   └── python_dojo_katas/       # Main package
@@ -46,7 +46,7 @@ To get started with the project, follow these steps:
    ```bash
    # On macOS/Linux
    curl -LsSf https://astral.sh/uv/install.sh | sh
-   
+
    # On Windows
    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
    ```
@@ -123,7 +123,7 @@ You can run tests for specific kata modules:
 # Test Pydantic katas only
 uv run pytest tests/test_pydantic_katas.py -v
 
-# Test PydanticAI katas only  
+# Test PydanticAI katas only
 uv run pytest tests/test_pydantic_ai_katas.py -v
 
 # Test UV katas only
