@@ -1,7 +1,15 @@
 import unittest
-from src.python_dojo_katas.pydantic_ai_katas.basic_agents import BasicAgent, AdvancedAgent
-from src.python_dojo_katas.pydantic_ai_katas.tool_integration import integrate_tool_with_agent
-from src.python_dojo_katas.pydantic_ai_katas.streaming_katas import handle_streaming_data
+from src.python_dojo_katas.pydantic_ai_katas.basic_agents import (
+    BasicAgent,
+    AdvancedAgent,
+)
+from src.python_dojo_katas.pydantic_ai_katas.tool_integration import (
+    integrate_tool_with_agent,
+)
+from src.python_dojo_katas.pydantic_ai_katas.streaming_katas import (
+    handle_streaming_data,
+)
+
 
 class TestPydanticAIKatas(unittest.TestCase):
 
@@ -31,5 +39,6 @@ class TestPydanticAIKatas(unittest.TestCase):
         self.assertIsInstance(result, dict)
         self.assertIn("received_data", result)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
