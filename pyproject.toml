@@ -1,0 +1,59 @@
+[project]
+name = "python-dojo-katas"
+version = "0.1.0"
+description = "A collection of Python katas for practicing Pydantic, PydanticAI, and UV."
+authors = [
+    {name = "Chad Thomas", email = "chad@skyarkitekten.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.12"
+dependencies = [
+    "email-validator>=2.2.0",
+    "pydantic>=2.5.0",
+    "pydantic-ai>=0.0.13",
+    "uvicorn>=0.24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tools.hatch.build.targets.wheel]
+packages = ["src/katas"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.7.0",
+    "pre-commit>=3.5.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0"
+]
+dev = [
+    "black>=23.0.0",
+    "ruff>=0.1.0", 
+    "mypy>=1.7.0",
+    "pre-commit>=3.5.0"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
